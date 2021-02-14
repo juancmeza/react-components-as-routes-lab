@@ -5,7 +5,11 @@ const Movies = () => {
   return (
     <div>
       <h1>Movies Page</h1>
-        {movies.map(movie => <div>Title: {movie.title}, Time: {movie.time}  </div>)}
+        {movies.map(movie => <div>
+          <h2>Title: {movie.title}</h2>
+           <h4>Time: {movie.time}</h4> 
+           <ul>{movie.genres.map(genre => <li>{genre}</li>)}</ul> 
+          </div>)}
     </div>
   );
 };
